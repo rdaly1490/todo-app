@@ -3,10 +3,11 @@
 //  todo-app
 //
 //  Created by Robert Daly on 11/27/17.
-//  Copyright © 2017 CoStar. All rights reserved.
+//  Copyright © 2017 DalyDevelopment. All rights reserved.
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
+//        if Auth.auth().currentUser != nil {
+//            self.window?.rootViewController!.performSegue(withIdentifier: "todoList", sender: nil)
+//        }
         return true
     }
 
